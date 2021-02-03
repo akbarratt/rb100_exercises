@@ -3,9 +3,10 @@ def valid_number?(number_string)
 end
 
 int1 =
-int2 = 
+int2 =
 
 loop do
+
   loop do
     puts "Please enter a positive or negative integer:"
     int1 = gets.chomp
@@ -20,8 +21,19 @@ loop do
     puts "Sorry, that's an invalid number. Try again."
   end
 
+  int1 = int1.to_i
+  int2 = int2.to_i
+
+  if int1 > 0 && int2 > 0
+    puts "Sorry, you need at least one negative number."
+    puts "Please start over."
+  elsif int1 < 0 && int2 < 0
+    puts "Sorry, you need at least one negative number."
+    puts "Please start over."
+  else
+    result = int1 + int2
+    puts "#{int1} + #{int2} = #{result}."
+    break
+  end
+
 end
-
-
-puts int1
-puts int2
