@@ -11,4 +11,20 @@ end
 
 time_of_day
 
-# Daylight has to be inside the method definition to be invoked because methods have their own scope.
+# In this solution, daylight has to be inside the method definition to be invoked because methods have their own scope.
+
+# Or:
+
+# daylight = [true, false].sample
+
+# def time_of_day(daylight)
+#     if daylight == true
+#         puts "It's daytime!"
+#     else
+#         puts "it's nighttime!"
+#     end
+# end
+
+# time_of_day(daylight)
+
+# Could have used a ternary operator. 
